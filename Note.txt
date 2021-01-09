@@ -1,0 +1,5 @@
+*Extension
+	Prettier
+	Angular language service 
+	Angular snippets
+	Angular Essentials
