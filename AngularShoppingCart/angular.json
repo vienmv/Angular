@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "AngularShoppingCart"
+  "defaultProject": "AngularShoppingCart",
+  "cli": {
+    "analytics": false
+  }
 }
