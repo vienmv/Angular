@@ -1,11 +1,16 @@
-#100daysOfAngular
-Link download và cài đặt các công cụ cần thiết:
+##Link download và cài đặt các công cụ cần thiết:
 
 - Visual Studio Code: https://code.visualstudio.com
 
 - Augury: https://augury.rangle.io
 
 - Node.js: https://nodejs.org/en
+
+##Extension
+Prettier
+Angular language service 
+Angular snippets
+Angular Essentials
 
  
 
