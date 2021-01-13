@@ -69,3 +69,26 @@ Cấu trúc thư mục project (các file chính) tạo bởi Angular CLI
 
  -------------------------------------
  ## Component trong Angular
+ Lệnh tạo Component bằng Angular CLI:
+
+ng generate component my-component
+hoặc viết tắt:
+
+ng g c my-component
+để không tạo ra file test thì thêm option --skipTests
+
+ng g c my-component --skipTests
+Ghi chú
+- Trong 1 ứng dụng Angular mặc định chỉ có 1 Root Component là App Component được gọi ở file src/index.html, các Component khác là con của App Component.
+
+- Root Component được khai báo trong Root Module (app.module.ts) và chỉ có Root Component mới gọi được ở file src/index.html (có thể có nhiều Root Component nếu khai báo thêm ở phần bootstrap).
+
+ Root Component
+
+- Root Module được khai báo và khởi tạo (bootstrap) ở file src/main.ts. Trong ứng dụng Angular sẽ cần 1 module để bootstrap (mặc định là AppModule) và có thể có nhiều module khác để cấu trúc code dễ bảo trì hơn (sẽ học chi tiết hơn ở các phần sau).
+
+
+
+- Việc chia Component như nào thì tuỳ thuộc vào độ phức tạp và tính độc lập, cũng như tính tái sử dụng của component, chứ không có 1 công thức cố định.
+
+- Thỉnh thoảng khi tạo Component mà vẫn đang chạy server thì có thể bị lỗi do trình biên dịch chưa nhận ra được file mới, hãy khởi động lại server để kiểm tra.
