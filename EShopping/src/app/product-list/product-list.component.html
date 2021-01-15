@@ -1,7 +1,6 @@
-<section class="container">
-  <ul class="products">
 
-    <li class="row" *ngFor="let product of products" >
+  <ul class="products">
+    <li class="row" *ngFor="let product of products">
       <div class="col left">
         <div class="thumbnail">
           <a href="#">
@@ -19,7 +18,14 @@
 
       <div class="col right">
         <div class="quantity">
-          <input type="number" class="quantity" step="1" [value]="product.quantity" />
+          <input
+          #inputQuantityElement
+            type="number"
+            class="quantity"
+            step="1"
+            [value]="product.quantity"
+            (input)="updateQuantity(inputQuantityElement)"
+          />
         </div>
 
         <div class="remove">
@@ -42,6 +48,5 @@
         </div>
       </div>
     </li>
-
   </ul>
-</section>
+

@@ -1,3 +1,12 @@
-<app-cart-header></app-cart-header>
-<app-product-list></app-product-list>
-<app-promo-code></app-promo-code>
+<main>
+  <header class="container">
+    <app-cart-header [numberItems]="numberItems"></app-cart-header>
+  </header>
+  <section class="container">
+    <app-product-list [products]="products"></app-product-list>
+  </section>
+  <section class="container">
+    <app-promo-code></app-promo-code>
+    <app-cart-sumary [subTotal]="subTotal" [tax]="tax" [total]="total" ></app-cart-sumary>
+  </section>
+</main>

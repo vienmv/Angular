@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cart-header',
   templateUrl: './cart-header.component.html',
 })
 export class CartHeaderComponent implements OnInit {
-  numberItems:number = 4;
+  @Input() numberItems:number;
 
   constructor() {}
 
