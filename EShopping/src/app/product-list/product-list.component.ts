@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 class Product {
-  id:string;
+  id: string;
   name: string;
   des: string;
   thumbnail: string;
@@ -16,7 +16,7 @@ class Product {
 export class ProductListComponent implements OnInit {
   products: Product[] = [
     {
-      id:`1`,
+      id: `1`,
       name: 'Iphone 11 promax',
       des: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Phasellus in egestas ipsum, non gravida felis. Class aptent taciti
@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
       price: 1000,
     },
     {
-      id:`2`,
+      id: `2`,
       name: 'Iphone 11',
       des: `Lorem ipsum dolor sit amet, consectetur adipiscing elit
         Phasellus in egestas ipsum, non gravida felis. Class
@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit {
       price: 990,
     },
     {
-      id:`3`,
+      id: `3`,
       name: 'Iphone 11 Pro',
       des: `Lorem ipsum dolor sit amet, consectetur adipiscing elit
         Phasellus in egestas ipsum, non gravida felis. Class
@@ -50,4 +50,10 @@ export class ProductListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  removeProduct(productId: string): void {
+   // alert(`remove Product ` + productId);
+    const index= this.products.findIndex(product => product.id === productId)
+    this.products.splice(index,1)
+  }
 }
