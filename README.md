@@ -92,3 +92,30 @@ Ghi chú
 - Việc chia Component như nào thì tuỳ thuộc vào độ phức tạp và tính độc lập, cũng như tính tái sử dụng của component, chứ không có 1 công thức cố định.
 
 - Thỉnh thoảng khi tạo Component mà vẫn đang chạy server thì có thể bị lỗi do trình biên dịch chưa nhận ra được file mới, hãy khởi động lại server để kiểm tra.
+
+##Data Binding & Template syntax
+- Trong Angular có 3 loại Directive, giúp cho việc thay đổi giao diện dễ dàng hơn: Components, Attribute Directives và Structure Directives.
+
+- Component là 1 loại Directives gồm có cả phần code logic và HTML template.
+
+- Attribute Directives tương tự như 1 Component nhưng được dùng để thay đổi hành vi của element, của Component hoặc của 1 Directive khác (được gán vào thẻ dạng Attribute).
+
+- Structure Directives là các Directives cho phép chỉnh sửa DOM layout bằng cách thay đổi các DOM Elements, giúp viết layout dễ dàng hơn với bằng cách áp dụng các lệnh điều kiện, vòng lặp:
+
+*ngIf: Dùng điều kiện để hiển thị hoặc xóa phần tử trên giao diện.
+*ngFor: Dùng vòng lặp để tạo ra nhiều phần tử tương tự nhau.
+*ngSwitch: Dùng điều kiện để hiển thị phần tử trong 1 tập hợp các phần tử. …
+- Tham khảo thêm: Built-in Structural Directives.
+
+- Sử dụng *ngFor tương tự cách dùng vòng lặp for ... of của Javascript: 
+
+let products = ["iPhone", "iPad", "iMac"];
+
+// Lặp qua từng phần tử trong mảng
+for (let product of products) {
+  console.log( product );
+}
+- Biến khai báo bởi keyword let trong template được gọi là Template input variable, và chỉ được sử dụng trong phạm vi khai báo:
+
+
+
