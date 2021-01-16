@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 class Product {
   id: string;
@@ -15,6 +15,7 @@ class Product {
 })
 export class ProductListComponent implements OnInit {
   @Input() products;
+  @Output() onRemoveProduct =new EventEmitter();
 
   constructor() {}
 
@@ -22,10 +23,8 @@ export class ProductListComponent implements OnInit {
 
   removeProduct(productId: string): void {
     // alert(`remove Product ` + productId);
-    const index = this.products.findIndex(
-      (product) => product.id === productId
-    );
-    this.products.splice(index, 1);
+    this.onRemoveProduct.emit(productId);
+
   }
   updateQuantity(element) {
     console.log(element);
