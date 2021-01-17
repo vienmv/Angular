@@ -16,6 +16,8 @@ class Product {
 export class ProductListComponent implements OnInit {
   @Input() products;
   @Output() onRemoveProduct =new EventEmitter();
+  @Output() onUpdateQuantity = new EventEmitter();
+
 
   constructor() {}
 
@@ -26,7 +28,16 @@ export class ProductListComponent implements OnInit {
     this.onRemoveProduct.emit(productId);
 
   }
-  updateQuantity(element) {
-    console.log(element);
+  inputQuantity(id: number, inputElement: HTMLInputElement) {
+    const value = inputElement.value;
+    const intValue = parseInt(value);
+
+    if (intValue < 1) {
+      inputElement.value = -intValue + '';
+    } else if (value.length > 2) {
+      inputElement.value = value.slice(0, 2);
+    }
+
+    this.onUpdateQuantity.emit({ id, quantity: parseInt(inputElement.value) || '' });
   }
 }

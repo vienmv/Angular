@@ -1,6 +1,5 @@
-
-  <div class="promotion">
-    <label for="promo-code">Have A Promo Code?</label>
-    <input type="text" id="promo-code" /> <button type="button"></button>
-  </div>
-
+<div class="promotion">
+  <label for="promo-code">Have A Promo Code?</label>
+  <input (input)="promoCode=$event.target.value" type="text" class="form-control">
+  <button type="button" (click)="applyPromoCode()"></button>
+</div>
